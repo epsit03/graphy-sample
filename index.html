@@ -7,35 +7,45 @@
 </head>
 <body style="font-family: Arial, sans-serif; margin: 0; padding: 0;">
 
-    <!-- Navigation Bar -->
-    <div class="navbar" style="background-color: #fff; color: black; border-bottom: 2px solid grey; overflow: hidden;">
-        <a href="#home" style="float: left; display: block; text-align: center; padding: 14px 20px; text-decoration: none;">Store</a>
-        <a href="#home" style="float: left; display: block; text-align: center; padding: 14px 20px; text-decoration: none;">/ Courses</a>
-        <a href="#home" style="float: left; display: block; text-align: center; padding: 14px 20px; text-decoration: none;">/ Android & iOS Courses</a>
-    </div>
+    <!-- Container holding both main content and other courses -->
+    <div style="display: flex;">
 
-    <div class="container" style="display: flex; justify-content: space-between; padding: 20px;">
-        <!-- Main content -->
-        <div class="main-content" style="width: 70%; display: flex; gap: 20px;">
-            <div class="img1" style="height: 600px; width: 200px;">
-                <img src="https://via.placeholder.com/400x400.png?text=Course+Video" alt="Course Image">
+        <!-- Main Content Container -->
+        <div style="width: 75%;">
+
+            <!-- Navigation Bar -->
+            <div class="navbar" style="background-color: #fff; color: black; border-bottom: 2px solid grey; overflow: hidden; width: 100%;">
+                <a href="#home" style="float: left; display: block; text-align: center; padding: 14px 20px; text-decoration: none;">Store</a>
+                <a href="#home" style="float: left; display: block; text-align: center; padding: 14px 3px; text-decoration: none;">/ Courses</a>
+                <a href="#home" style="float: left; display: block; text-align: center; padding: 14px 3px; text-decoration: none;">/ Android & iOS Courses</a>
             </div>
-            <div class="course-details" style="max-width: 60%; margin-left: 200px;">
-                <h1 style="font-size: 34px; margin: 0;">Basics Of Stock Market + Fundamental Analysis + Technical Analysis + Magic of Mutual Funds + Art of Value Investing (For Android & iOS)</h1>
-                <p style="font-size: 22px; margin: 5px 0;"><span class="stars" style="color: #f0c040; font-size: 18px;">★★★★★</span> 3.9 (146 ratings)</p>
-                <p class="course-info" style="font-size: 14px; color: #666; margin: 5px 0;">
-                    <span>📘 5 Courses</span><br>
-                    <span>Language: <a href="#" style="color: #007bff; text-decoration: none;">English</a></span><br>
-                    <span>Validity Period: <a href="#" style="color: #007bff; text-decoration: none;">365 days</a></span>
-                </p>
-                <p class="price" style="color: #e65c00; font-size: 32px; font-weight: bold; margin-top: 10px;">₹31,999</p>
-                <p class="gst-info" style="color: #666; font-size: 14px;">Including 18% GST</p>
-                <a href="#" class="button" style="background-color: #007bff; color: white; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; border-radius: 5px; margin-top: 10px;">Add to Cart</a>
+
+            <div class="container" style="padding: 20px;">
+                <!-- Main content -->
+                <div class="main-content" style="display: flex; gap: 15px;">
+                    <div class="img1" style="height: 600px; width: 200px;">
+                        <img src="https://via.placeholder.com/400x400.png?text=Course+Video" alt="Course Image">
+                    </div>
+                    <div class="course-details" style="max-width: 60%; margin-left: 200px;">
+                        <h1 style="font-size: 34px; margin: 0;">Basics Of Stock Market + Fundamental Analysis + Technical Analysis + Magic of Mutual Funds + Art of Value Investing (For Android & iOS)</h1>
+                        <p style="font-size: 22px; margin: 5px 0;"><span class="stars" style="color: blue; font-size: 21px;">★★★★★</span> 3.9 (146 ratings)</p>
+                       <p class="course-info" style="font-size: 14px; color: #666;">
+    <div style="font-size: 21px; margin-bottom: 10px; display: inline-block;">📘 5 Courses</div><br>
+    <div style="font-size: 21px; margin-bottom: 10px; display: inline-block;">Language: <a href="#" style="color: #007bff; text-decoration: none;">English</a></div><br>
+    <div style="font-size: 21px; display: inline-block;">Validity Period: <a href="#" style="color: #007bff; text-decoration: none;">365 days</a></div>
+</p>
+
+                        <p class="price" style="color: #FFAA00; font-size: 32px; display: inline-block;">₹31,999</p>
+                        <div class="gst-info" style="color: #666; font-size: 14px; display: inline-block;">Including 18% GST </div><br>
+                        <a href="#" class="button" style="background-color: #007bff; color: white; padding: 10px 20px; text-align: center; text-decoration: none; border-radius: 5px;">Add to Cart</a>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <!-- Other courses -->
-        <div class="other-courses-container" style="width: 25%; display: flex; flex-direction: column; gap: 20px;">
+        <!-- Other Courses Section (Aligned at the top and right side) -->
+        <div class="other-courses-container" style="width: 25%; padding: 20px; display: flex; flex-direction: column; gap: 20px; background-color: #f9f9f9;">
+
             <div class="other-courses" style="border: 1px solid #ddd; padding: 10px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);">
                 <p style="font-size: 14px;">Other Courses</p>
                 <img src="https://via.placeholder.com/150x150.png?text=Other+Course+Video+1" alt="Other Course" style="width: 100%; height: auto; border-radius: 5px;">
@@ -55,6 +65,7 @@
                 <a href="#" class="buy-now-button" style="background-color: #000; color: white; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; border-radius: 5px; margin-top: 10px; float: right;">Buy Now</a>
             </div>
         </div>
+
     </div>
 
     <!-- Responsive styling -->
