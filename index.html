@@ -1,205 +1,219 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Course Page</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Course Page</title>
+		<style>
+		    body {
+		        font-family: Arial, sans-serif;
+		        margin: 0;
+		        padding: 0;
+		    }
+		    
+		    .img1 {
+		    	height: 600px;
+		    	width: 200px;
+		    	
+		    	}
 
-        /* Navigation Bar */
-        .navbar {
-            background-color: #333;
-            overflow: hidden;
-        }
+		    /* Navigation Bar */
+		    .navbar {
+		        background-color: #fff;
+		        color: black;
+		        border-bottom: 2px solid grey;
+		        overflow: hidden;
+		    }
 
-        .navbar a {
-            float: left;
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 20px;
-            text-decoration: none;
-        }
+		    .navbar a {
+		        float: left;
+		        display: block;
+		        text-align: center;
+		        padding: 14px 20px;
+		        text-decoration: none;
+		        
+		    }
 
-        .navbar a:hover {
-            background-color: #ddd;
-            color: black;
-        }
+		    .navbar a:hover {
+		        background-color: #ddd;
+		        color: black;
+		    }
 
-        .container {
-            display: flex;
-            justify-content: space-between;
-            padding: 20px;
-        }
+		    .container {
+		        display: flex;
+		        justify-content: space-between;
+		        padding: 20px;
+		    }
 
-        .main-content {
-            width: 70%;
-            display: flex;
-            gap: 20px;
-        }
+		    .main-content {
+		        width: 70%;
+		        display: flex;
+		        gap: 20px;
+		    }
 
-        .main-content img {
-            width: 200px;
-            height: auto;
-        }
+		    .course-details {
+		        max-width: 60%;
+		        margin-left: 200px;
+		    }
 
-        .course-details {
-            max-width: 60%;
-        }
+		    .course-details h1 {
+		        font-size: 34px;
+		        margin: 0;
+		    }
 
-        .course-details h1 {
-            font-size: 24px;
-            margin: 0;
-        }
+		    .course-details p {
+		    font-size: 22px;
+		        margin: 5px 0;
+		    }
 
-        .course-details p {
-            margin: 5px 0;
-        }
+		    .course-details .stars {
+		        color: #f0c040;
+		        font-size: 18px;
+		    }
 
-        .course-details .stars {
-            color: #f0c040;
-            font-size: 18px;
-        }
+		    .course-info {
+		        font-size: 14px;
+		        color: #666;
+		        margin: 5px 0;
+		    }
 
-        .course-info {
-            font-size: 14px;
-            color: #666;
-            margin: 5px 0;
-        }
+		    .course-info a {
+		        color: #007bff;
+		        text-decoration: none;
+		    }
 
-        .course-info a {
-            color: #007bff;
-            text-decoration: none;
-        }
+		    .course-info a:hover {
+		        text-decoration: underline;
+		    }
 
-        .course-info a:hover {
-            text-decoration: underline;
-        }
+		    .price {
+		        color: #e65c00;
+		        font-size: 32px;
+		        font-weight: bold;
+		        margin-top: 10px;
+		    }
 
-        .price {
-            color: #e65c00;
-            font-size: 32px;
-            font-weight: bold;
-            margin-top: 10px;
-        }
+		    .gst-info {
+		        color: #666;
+		        font-size: 14px;
+		    }
 
-        .gst-info {
-            color: #666;
-            font-size: 14px;
-        }
+		    .button {
+		        background-color: #007bff; /* Original blue for Add to Cart */
+		        color: white;
+		        padding: 10px 20px;
+		        text-align: center;
+		        text-decoration: none;
+		        display: inline-block;
+		        border-radius: 5px;
+		        margin-top: 10px;
+		    }
 
-        .button {
-            background-color: #000; /* Changed to black */
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            border-radius: 5px;
-            margin-top: 10px;
-            float: right; /* Added to align right */
-        }
+		    /* New styling for Buy Now buttons */
+		    .buy-now-button {
+		        background-color: #000; /* Black background */
+		        color: white;
+		        padding: 10px 20px;
+		        text-align: center;
+		        text-decoration: none;
+		        display: inline-block;
+		        border-radius: 5px;
+		        margin-top: 10px;
+		        float: right; /* Align to the right */
+		    }
 
-        .other-courses-container {
-            width: 25%;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
+		    .other-courses-container {
+		        width: 25%;
+		        display: flex;
+		        flex-direction: column;
+		        gap: 20px;
+		    }
 
-        .other-courses {
-            border: 1px solid #ddd;
-            padding: 10px;
-            border-radius: 10px;
-            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
-        }
+		    .other-courses {
+		        border: 1px solid #ddd;
+		        padding: 10px;
+		        border-radius: 10px;
+		        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+		    }
 
-        .other-courses img {
-            width: 100%;
-            height: auto;
-            border-radius: 5px;
-        }
+		    .other-courses img {
+		        width: 100%;
+		        height: auto;
+		        border-radius: 5px;
+		    }
 
-        .other-courses p, .other-courses span {
-            font-size: 14px;
-            margin: 10px 0;
-        }
+		    .other-courses p, .other-courses span {
+		        font-size: 14px;
+		        margin: 10px 0;
+		    }
 
-        .other-courses .stars {
-            color: #f0c040;
-            font-size: 18px;
-        }
+		    .other-courses .stars {
+		        color: #f0c040;
+		        font-size: 18px;
+		    }
 
-        /* Responsive for smaller screens */
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-            }
+		    /* Responsive for smaller screens */
+		    @media (max-width: 768px) {
+		        .container {
+		            flex-direction: column;
+		        }
 
-            .main-content, .other-courses-container {
-                width: 100%;
-            }
+		        .main-content, .other-courses-container {
+		            width: 100%;
+		        }
 
-            .main-content img {
-                width: 100px;
-            }
-        }
-    </style>
-</head>
-<body>
+		        .main-content img {
+		            width: 100px;
+		        }
+		    }
+		</style>
+	</head>
+	<body>
 
-    <!-- Navigation Bar -->
-    <div class="navbar">
-        <a href="#home">Home</a>
-        <a href="#courses">Courses</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-    </div>
+		<!-- Navigation Bar -->
+		<div class="navbar">
+		    <a href="#home">Store</a><a href="#home">/ Courses</a> <a href="#home">/ Android & iOS Courses</a>
+		</div>
 
-    <div class="container">
-        <!-- Main content -->
-        <div class="main-content">
-            <img src="https://via.placeholder.com/200x300.png?text=Course+Image" alt="Course Image">
-            <div class="course-details">
-                <h1>Basics Of Stock Market + Fundamental Analysis + Technical Analysis + Magic of Mutual Funds + Art of Value Investing (For Android & iOS)</h1>
-                <p><span class="stars">★★★★★</span> 3.9 (146 ratings)</p>
-                <p class="course-info">
-                    <span>📘 5 Courses</span><br>
-                    <span>Language: <a href="#">English</a></span><br>
-                    <span>Validity Period: <a href="#">365 days</a></span>
-                </p>
-                <p class="price">₹31,999</p>
-                <p class="gst-info">Including 18% GST</p>
-                <a href="#" class="button">Add to Cart</a>
-            </div>
-        </div>
+		<div class="container">
+		    <!-- Main content -->
+		    <div class="main-content">
+		        <div class="img1"><img src="https://via.placeholder.com/400x400.png?text=Course+Image" alt="Course Image"></div>
+		        <div class="course-details">
+		            <h1>Basics Of Stock Market + Fundamental Analysis + Technical Analysis + Magic of Mutual Funds + Art of Value Investing (For Android & iOS)</h1>
+		            <p><span class="stars">★★★★★</span> 3.9 (146 ratings)</p>
+		            <p class="course-info">
+		                <span>📘 5 Courses</span><br>
+		                <span>Language: <a href="#">English</a></span><br>
+		                <span>Validity Period: <a href="#">365 days</a></span>
+		            </p>
+		            <p class="price">₹31,999</p>
+		            <p class="gst-info">Including 18% GST</p>
+		            <a href="#" class="button">Add to Cart</a> <!-- Add to Cart stays the same -->
+		        </div>
+		    </div>
 
-        <!-- Other courses -->
-        <div class="other-courses-container">
-            <div class="other-courses">
-                <p>Other Courses</p>
-                <img src="https://via.placeholder.com/150x150.png?text=Other+Course+Image" alt="Other Course">
-                <p>Basics Of Stock Market + Fundamental Analysis + Technical Analysis +...</p>
-                <span>7 Courses</span><br>
-                <p><span class="stars">★★★★★</span> 5.0 (1 rating)</p>
-                <p><strike>₹50,000</strike> ₹46,999</p>
-                <a href="#" class="button">Buy Now</a>
-            </div>
+		    <!-- Other courses -->
+		    <div class="other-courses-container">
+		        <div class="other-courses">
+		            <p>Other Courses</p>
+		            <img src="https://via.placeholder.com/150x150.png?text=Other+Course+Image" alt="Other Course">
+		            <p>Basics Of Stock Market + Fundamental Analysis + Technical Analysis +...</p>
+		            <span>7 Courses</span><br>
+		            <p><span class="stars">★★★★★</span> 5.0 (1 rating)</p>
+		            <p><strike>₹50,000</strike> ₹46,999</p>
+		            <a href="#" class="buy-now-button">Buy Now</a> <!-- New class for Buy Now button -->
+		        </div>
 
-            <div class="other-courses">
-                <img src="https://via.placeholder.com/150x150.png?text=Other+Course+Image" alt="Other Course">
-                <p>Crash Course - All About Stock Market</p>
-                <span>3 Courses</span><br>
-                <p><span class="stars">★★★★★</span> 5.0 (1 rating)</p>
-                <p><strike>₹25,000</strike> ₹16,999</p>
-                <a href="#" class="button">Buy Now</a>
-            </div>
-        </div>
-    </div>
-</body>
-</html>
+		        <div class="other-courses">
+		            <img src="https://via.placeholder.com/150x150.png?text=Other+Course+Image" alt="Other Course">
+		            <p>Crash Course - All About Stock Market</p>
+		            <span>3 Courses</span><br>
+		            <p><span class="stars">★★★★★</span> 5.0 (1 rating)</p>
+		            <p><strike>₹25,000</strike> ₹16,999</p>
+		            <a href="#" class="buy-now-button">Buy Now</a> <!-- New class for Buy Now button -->
+		        </div>
+		    </div>
+		</div>
+	</body>
+	</html>
